@@ -1,9 +1,10 @@
-import { StatusBar, StyleSheet, SafeAreaView, View } from "react-native";
+import { StatusBar as StatusBarStyled } from 'expo-status-bar';
+import { StatusBar, StyleSheet, SafeAreaView, View, Platform } from "react-native";
 
 function Screen({ children, style }) {
   return (
     <SafeAreaView style={[styles.screen, style]}>
-      <StatusBar barStyle="default" color="white" />
+      <StatusBarStyled style='auto' />
       <View style={[styles.view, style]}>{children}</View>
     </SafeAreaView>
   );
@@ -13,7 +14,7 @@ export default Screen;
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: StatusBar.currentHeight,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     flex: 1,
   },
   view: {
