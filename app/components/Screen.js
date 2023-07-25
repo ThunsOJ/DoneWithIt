@@ -1,10 +1,10 @@
-import { StatusBar as StatusBarStyled } from 'expo-status-bar';
+import { StatusBar as StatusBarStyling } from 'expo-status-bar';
 import { StatusBar, StyleSheet, SafeAreaView, View, Platform } from "react-native";
 
 function Screen({ children, style }) {
   return (
     <SafeAreaView style={[styles.screen, style]}>
-      <StatusBarStyled style='auto' />
+      <StatusBarStyling style='auto' />  
       <View style={[styles.view, style]}>{children}</View>
     </SafeAreaView>
   );
