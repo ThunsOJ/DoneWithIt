@@ -1,15 +1,20 @@
 import { View, StyleSheet } from "react-native";
-import {Image} from "react-native-expo-image-cache"
+import { Image } from "react-native-expo-image-cache";
 
 import colors from "../config/colors";
 import AppText from "./AppText";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-function Card({ title, subtitle, imageUrl, onPress }) {
+function Card({ title, subtitle, imageUrl, onPress, thumbnailUrl }) {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.card}>
-        <Image style={styles.image} source={{uri: imageUrl}}></Image>
+        <Image
+          style={styles.image}
+          preview={{ uri: thumbnailUrl }}
+          uri={imageUrl}
+          tint="light"
+        ></Image>
         <View style={styles.detailsContainer}>
           <AppText style={styles.title} numberOfLines={1}>
             {title}

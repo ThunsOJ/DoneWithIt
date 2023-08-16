@@ -2,14 +2,15 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import navigationTheme from "./app/navigation/navigationTheme";
 import AppNavigator from "./app/navigation/AppNavigator";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import AuthNavigator from "./app/navigation/AuthNavigator";
+import OfflineNotice from "./app/components/OfflineNotice";
 
 export default function App() {
   return (
-    <NavigationContainer theme={navigationTheme}>
-      <AppNavigator />
-    </NavigationContainer>
+    <>
+      <OfflineNotice />
+      <NavigationContainer theme={navigationTheme}>
+        <AppNavigator />
+      </NavigationContainer>
+    </>
   );
 }
-
