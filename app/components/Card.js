@@ -1,4 +1,5 @@
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet } from "react-native";
+import {Image} from "react-native-expo-image-cache"
 
 import colors from "../config/colors";
 import AppText from "./AppText";
