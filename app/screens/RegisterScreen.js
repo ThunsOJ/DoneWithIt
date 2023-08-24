@@ -35,6 +35,7 @@ function RegisterScreen() {
         setError("An unexpected error occurred.");
         console.log(result);
       }
+      return;
     }
     const { data: authToken } = await loginApi.request(
       userInfo.email,
