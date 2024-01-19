@@ -6,8 +6,8 @@ const Stack = createNativeStackNavigator();
 
 const FeedNavigator = () => (
     <Stack.Navigator screenOptions={{
-      headerShown: false, // Hide the header for all screens in this navigator
-      presentation: "modal", // Set the presentation style to "modal"
+      headerShown: false,
+      presentation: "modal",
     }}>
         <Stack.Screen name="Listings" component={ListingsScreen} />
         <Stack.Screen name="ListingDetails" component={ListingDetailsScreen} />
