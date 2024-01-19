@@ -5,9 +5,6 @@ import Screen from "../components/Screen";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
 import ListItemSeparator from "../components/lists/ListItemSeparator";
-import { useContext } from "react";
-import AuthContext from "../auth/context";
-import authStorage from "../auth/storage";
 import useAuth from "../auth/useAuth";
 
 const menuItems = [
