@@ -5,3 +5,4 @@ export default Object.freeze({
   MESSAGES: "Messages",
   REGISTER: "Register",
 });
+

@@ -19,3 +19,4 @@ export default useAuth = () => {
 
   return { user, logOut, setUser, logIn };
 };
+
