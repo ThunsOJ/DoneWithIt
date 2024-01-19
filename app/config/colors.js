@@ -8,3 +8,4 @@ export default {
   danger: "#ff5252",
   dark: "#0c0c0c",
 };
+
